@@ -1,0 +1,278 @@
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Creating shell snapshot for bash (/bin/bash)
+[DEBUG] Looking for shell config file: /root/.bashrc
+[DEBUG] Shell config file not found: /root/.bashrc, creating snapshot with Claude Code defaults only
+[DEBUG] Snapshots directory: /root/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /root/.claude/shell-snapshots/snapshot-bash-1763401518824-32s7n0.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /root/.claude/todos/b5ff384c-6583-4f00-b5de-285ea88334fa-agent-b5ff384c-6583-4f00-b5de-285ea88334fa.json.tmp.753.1763401518826
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /root/.claude/todos/b5ff384c-6583-4f00-b5de-285ea88334fa-agent-b5ff384c-6583-4f00-b5de-285ea88334fa.json.tmp.753.1763401518826 to /root/.claude/todos/b5ff384c-6583-4f00-b5de-285ea88334fa-agent-b5ff384c-6583-4f00-b5de-285ea88334fa.json
+[DEBUG] File /root/.claude/todos/b5ff384c-6583-4f00-b5de-285ea88334fa-agent-b5ff384c-6583-4f00-b5de-285ea88334fa.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401518830
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40378 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401518830 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/root/.claude/skills, project=/workspace/.claude/skills
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] MCP server "happy": Initializing HTTP transport to http://127.0.0.1:39953/
+[DEBUG] MCP server "happy": Node version: v22.16.0, Platform: linux
+[DEBUG] MCP server "happy": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "happy": MTLS options: default
+[DEBUG] MCP server "happy": HTTP transport options: {"url":"http://127.0.0.1:39953/","headers":{"User-Agent":"claude-code/2.0.14"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "happy": HTTP transport created successfully
+[DEBUG] MCP server "happy": Client created, setting up request handler
+[DEBUG] MCP server "happy": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "happy": Testing basic HTTP connectivity to http://127.0.0.1:39953/
+[DEBUG] MCP server "happy": Parsed URL: host=127.0.0.1, port=39953, protocol=http:
+[DEBUG] MCP server "happy": Using loopback address: 127.0.0.1
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401518860
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40378 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401518860 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Executing hooks for SessionStart:startup
+[DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401518887
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40273 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401518887 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401518888
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40273 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401518888 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=true
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-linux/rg)
+[DEBUG] Shell snapshot created successfully (398 bytes)
+[DEBUG] Summarizing all 3 messages (~0 tokens)
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] MCP server "happy": Successfully connected to http server in 83ms
+[DEBUG] MCP server "happy": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Happy MCP","version":"1.0.0","description":"Happy CLI MCP server with chat session management tools"}}
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401519028
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40273 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401519028 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401519029
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40273 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401519029 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401519032
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40378 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401519032 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[ERROR] Error: Error: 400 {"request_id":"763401721793921013","ResponseMeta":{"RequestId":"763401721793921013","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async Promise.all (index 0)
+    at async OX1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:2247)
+    at async AwQ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3209:482)
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error: Error: 400 {"request_id":"763401725240921013","ResponseMeta":{"RequestId":"763401725240921013","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async AwQ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3209:531)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for 77c6f5fc-179b-4a69-8611-b1cdce8acea8, tracking 0 files
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "apk add:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[ERROR] SyntaxError: SyntaxError: Unexpected token 'T', "The comman"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:62:719
+    at Q (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:8:15093)
+    at ia2 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:753:22219)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Bash tool invoked with command: apk add terminus-font
+[DEBUG] Bash tool description: Install terminus-font package using apk
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401566921
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40412 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401566921 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Executing hooks for Stop
+[DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401566938
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40431 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401566938 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401566942
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40529 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401566942 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /root/.claude/shell-snapshots/snapshot-bash-1763401518824-32s7n0.sh
+[DEBUG] MCP server "happy": HTTP transport closed/disconnected, attempting automatic reconnection
+[DEBUG] FileHistory: Making snapshot for message b179479c-213d-4a25-ba61-192b4896daf1
+[DEBUG] FileHistory: Added snapshot for b179479c-213d-4a25-ba61-192b4896daf1, tracking 0 files
+[DEBUG] MCP server "happy": Initializing HTTP transport to http://127.0.0.1:39953/
+[DEBUG] MCP server "happy": Node version: v22.16.0, Platform: linux
+[DEBUG] MCP server "happy": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "happy": MTLS options: default
+[DEBUG] MCP server "happy": HTTP transport options: {"url":"http://127.0.0.1:39953/","headers":{"User-Agent":"claude-code/2.0.14"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "happy": HTTP transport created successfully
+[DEBUG] MCP server "happy": Client created, setting up request handler
+[DEBUG] MCP server "happy": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "happy": Testing basic HTTP connectivity to http://127.0.0.1:39953/
+[DEBUG] MCP server "happy": Parsed URL: host=127.0.0.1, port=39953, protocol=http:
+[DEBUG] MCP server "happy": Using loopback address: 127.0.0.1
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401571322
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40549 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401571322 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401571324
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40632 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401571324 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] MCP server "happy": HTTP connection dropped after 52s uptime
+[DEBUG] MCP server "happy": Connection error: SSE stream disconnected: AbortError: This operation was aborted
+[DEBUG] Metrics opt-out check failed: No API key available
+[DEBUG] Metrics check failed, defaulting to disabled
+[DEBUG] Metrics export disabled by organization setting
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.753.1763401571330
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41043 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.753.1763401571330 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically

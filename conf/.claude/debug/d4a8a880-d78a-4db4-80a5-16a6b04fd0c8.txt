@@ -1,0 +1,236 @@
+[DEBUG] Executing hooks for SessionStart:clear
+[DEBUG] Getting matching hook commands for SessionStart with query: clear
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "clear" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Added snapshot for 7d4a7184-41d2-4159-b9f6-1f8da750bbdd, tracking 0 files
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763399986856
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 39342 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763399986856 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763399986858
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 39426 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763399986858 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error: Error: 400 {"request_id":"763399987726401148","ResponseMeta":{"RequestId":"763399987726401148","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async AwQ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3209:531)
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[ERROR] Error: Error: 400 {"request_id":"763399990529401148","ResponseMeta":{"RequestId":"763399990529401148","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async sF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3139)
+    at async Promise.all (index 6)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+    at async Object.call (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:1753:12530)
+[ERROR] Error: Error: 400 {"request_id":"763399990651565814","ResponseMeta":{"RequestId":"763399990651565814","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async nF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:2083)
+    at async Promise.all (index 5)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[ERROR] Error: Error: 400 {"request_id":"763399990654845409","ResponseMeta":{"RequestId":"763399990654845409","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async Promise.all (index 0)
+    at async OX1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:2247)
+    at async Promise.all (index 3)
+[ERROR] Error: Error: 400 {"request_id":"763399990657203018","ResponseMeta":{"RequestId":"763399990657203018","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Promise.all (index 1)
+    at async lF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1319)
+    at async Promise.all (index 0)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[ERROR] Error: Error: 400 {"request_id":"763399990654539193","ResponseMeta":{"RequestId":"763399990654539193","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Promise.all (index 0)
+    at async lF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1319)
+    at async Promise.all (index 0)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[ERROR] Error: Error: 400 {"request_id":"763399990665621023","ResponseMeta":{"RequestId":"763399990665621023","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Promise.all (index 4)
+    at async lF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1319)
+    at async Promise.all (index 0)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[ERROR] Error: Error: 400 {"request_id":"763399990660350062","ResponseMeta":{"RequestId":"763399990660350062","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Promise.all (index 3)
+    at async lF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1319)
+    at async Promise.all (index 0)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[ERROR] Error: Error: 400 {"request_id":"763399990736092148","ResponseMeta":{"RequestId":"763399990736092148","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async iF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1871)
+    at async Promise.all (index 2)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[ERROR] Error: Error: 400 {"request_id":"763399990881747889","ResponseMeta":{"RequestId":"763399990881747889","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Promise.all (index 2)
+    at async lF8 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1319)
+    at async Promise.all (index 0)
+    at async PGB (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:3551)
+[DEBUG] FileHistory: Making snapshot for message 0659888c-fb3a-484d-b7d6-8b54a3d6c957
+[DEBUG] FileHistory: Added snapshot for 0659888c-fb3a-484d-b7d6-8b54a3d6c957, tracking 0 files
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763399995078
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 39451 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763399995078 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763399995080
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 39537 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763399995080 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Cleaned up session snapshot: /root/.claude/shell-snapshots/snapshot-bash-1763399983201-5hcq63.sh
+[DEBUG] MCP server "happy": HTTP transport closed/disconnected, attempting automatic reconnection
+[DEBUG] FileHistory: Making snapshot for message cbb01230-cfae-4c72-b61e-95631dcb5d98
+[DEBUG] FileHistory: Added snapshot for cbb01230-cfae-4c72-b61e-95631dcb5d98, tracking 0 files
+[DEBUG] MCP server "happy": Initializing HTTP transport to http://127.0.0.1:45755/
+[DEBUG] MCP server "happy": Node version: v22.16.0, Platform: linux
+[DEBUG] MCP server "happy": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "happy": MTLS options: default
+[DEBUG] MCP server "happy": HTTP transport options: {"url":"http://127.0.0.1:45755/","headers":{"User-Agent":"claude-code/2.0.14"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "happy": HTTP transport created successfully
+[DEBUG] MCP server "happy": Client created, setting up request handler
+[DEBUG] MCP server "happy": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "happy": Testing basic HTTP connectivity to http://127.0.0.1:45755/
+[DEBUG] MCP server "happy": Parsed URL: host=127.0.0.1, port=45755, protocol=http:
+[DEBUG] MCP server "happy": Using loopback address: 127.0.0.1
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763400001278
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 39561 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763400001278 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763400001280
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 39644 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763400001280 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] MCP server "happy": HTTP connection dropped after 17s uptime
+[DEBUG] MCP server "happy": Connection error: SSE stream disconnected: AbortError: This operation was aborted
+[DEBUG] Metrics opt-out check failed: No API key available
+[DEBUG] Metrics check failed, defaulting to disabled
+[DEBUG] Metrics export disabled by organization setting
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter flush complete
+[DEBUG] BigQuery metrics exporter shutdown complete
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.374.1763400001287
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 40025 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.374.1763400001287 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically

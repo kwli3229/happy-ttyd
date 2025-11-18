@@ -1,0 +1,527 @@
+[DEBUG] Watching for changes in setting files /root/.claude/settings.json...
+[DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+[DEBUG] Creating shell snapshot for bash (/bin/bash)
+[DEBUG] Looking for shell config file: /root/.bashrc
+[DEBUG] Shell config file not found: /root/.bashrc, creating snapshot with Claude Code defaults only
+[DEBUG] Snapshots directory: /root/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /root/.claude/shell-snapshots/snapshot-bash-1763402233036-jr3ojj.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+[DEBUG] Writing to temp file: /root/.claude/todos/694593de-da28-4022-83e2-1e051eeae2b0-agent-694593de-da28-4022-83e2-1e051eeae2b0.json.tmp.1227.1763402233037
+[DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /root/.claude/todos/694593de-da28-4022-83e2-1e051eeae2b0-agent-694593de-da28-4022-83e2-1e051eeae2b0.json.tmp.1227.1763402233037 to /root/.claude/todos/694593de-da28-4022-83e2-1e051eeae2b0-agent-694593de-da28-4022-83e2-1e051eeae2b0.json
+[DEBUG] File /root/.claude/todos/694593de-da28-4022-83e2-1e051eeae2b0-agent-694593de-da28-4022-83e2-1e051eeae2b0.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402233044
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41217 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402233044 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/root/.claude/skills, project=/workspace/.claude/skills
+[DEBUG] Total plugin agents loaded: 0
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] MCP server "happy": Initializing HTTP transport to http://127.0.0.1:33877/
+[DEBUG] MCP server "happy": Node version: v22.16.0, Platform: linux
+[DEBUG] MCP server "happy": Environment: {"NODE_OPTIONS":"not set","UV_THREADPOOL_SIZE":"default","HTTP_PROXY":"not set","HTTPS_PROXY":"not set","NO_PROXY":"not set"}
+[DEBUG] MCP server "happy": MTLS options: default
+[DEBUG] MCP server "happy": HTTP transport options: {"url":"http://127.0.0.1:33877/","headers":{"User-Agent":"claude-code/2.0.14"},"hasAuthProvider":true,"timeoutMs":60000}
+[DEBUG] MCP server "happy": HTTP transport created successfully
+[DEBUG] MCP server "happy": Client created, setting up request handler
+[DEBUG] MCP server "happy": Starting connection with timeout of 30000ms
+[DEBUG] MCP server "happy": Testing basic HTTP connectivity to http://127.0.0.1:33877/
+[DEBUG] MCP server "happy": Parsed URL: host=127.0.0.1, port=33877, protocol=http:
+[DEBUG] MCP server "happy": Using loopback address: 127.0.0.1
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402233073
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41217 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402233073 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-linux/rg)
+[DEBUG] Shell snapshot created successfully (398 bytes)
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] MCP server "happy": Successfully connected to http server in 61ms
+[DEBUG] MCP server "happy": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Happy MCP","version":"1.0.0","description":"Happy CLI MCP server with chat session management tools"}}
+[DEBUG] MCP server "happy": No token data found
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402233189
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41217 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402233189 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402233192
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41217 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402233192 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[ERROR] Error: Error: 400 {"request_id":"763402233306237814","ResponseMeta":{"RequestId":"763402233306237814","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async Promise.all (index 0)
+    at async OX1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:2247)
+    at async AwQ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3209:482)
+[DEBUG] Executing hooks for SessionStart:resume
+[DEBUG] Getting matching hook commands for SessionStart with query: resume
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: conf
+    at file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:833:4217
+    at Object.useMemo (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:73:25928)
+    at YxQ.useMemo (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:11:7725)
+    at WE (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:833:4108)
+    at G$ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:73:19415)
+    at ka (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:75:42814)
+    at S9 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:75:38355)
+    at Wm (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:75:38283)
+    at z$ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:75:38137)
+    at WC (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:75:35216)
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402235129
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41112 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402235129 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402235131
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41112 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402235131 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] performStartupChecks called, ENABLE_PLUGINS=true
+[DEBUG] Starting background plugin installations
+[DEBUG] performBackgroundPluginInstallations called
+[DEBUG] Writing to temp file: /root/.claude.json.tmp.1227.1763402235141
+[DEBUG] Preserving file permissions: 100600
+[DEBUG] Temp file written successfully, size: 41217 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.claude.json.tmp.1227.1763402235141 to /root/.claude.json
+[DEBUG] File /root/.claude.json written atomically
+[DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+[DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Slash commands included in SlashCommand tool:
+[ERROR] Error: Error: 400 {"request_id":"763402237912248774","ResponseMeta":{"RequestId":"763402237912248774","ErrorCode":"InvalidArgument","ErrorMessage":"Missing Action parameter"}}
+    at N4.generate (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:428:21403)
+    at tS.makeStatusError (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:2117)
+    at tS.makeRequest (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:573:5330)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BJ1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:724:27017)
+    at async sH1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:965)
+    at async Lr1 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3199:1174)
+    at async AwQ (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:3209:531)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Executing hooks for UserPromptSubmit
+[DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] FileHistory: Making snapshot for message a4c549ca-9c31-4507-9b8a-92d25551e57e
+[DEBUG] FileHistory: Added snapshot for a4c549ca-9c31-4507-9b8a-92d25551e57e, tracking 1 files
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] Stream started - received first chunk
+[ERROR] Error streaming, falling back to non-streaming mode: Unable to parse tool parameter JSON from model. Please retry your request or adjust your prompt. Error: SyntaxError: Unexpected non-whitespace character after JSON at position 108 (line 1 column 109). JSON: {"description": "Check tmux client terminal type", "command": "tmux display-message -p \"#{client_termtype}\""}{"d
+[ERROR] SyntaxError: SyntaxError: Unexpected token 'I', "I understa"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:62:719
+    at Q (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:8:15093)
+    at ia2 (file:///usr/local/lib/node_modules/happy-coder/node_modules/@anthropic-ai/claude-code/cli.js:753:22219)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "tmux:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Bash tool invoked with command: tmux -V
+[DEBUG] Bash tool description: Check tmux version
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "printf:*"
+      },
+      {
+        "toolName": "Bash",
+        "ruleContent": "echo:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Bash tool invoked with command: printf '\u2764\uFE0F' && echo " <- should be a heart"
+[DEBUG] Bash tool description: Test character width detection
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "echo:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Bash tool invoked with command: echo "LC_ALL=$LC_ALL LANG=$LANG LC_CTYPE=$LC_CTYPE"
+[DEBUG] Bash tool description: Check locale in tmux session
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Executing hooks for PreToolUse:Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Read: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Read",
+        "ruleContent": "//root/**"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Executing hooks for PostToolUse:Read
+[DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Executing hooks for PreToolUse:Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Edit: [
+  {
+    "type": "setMode",
+    "mode": "acceptEdits",
+    "destination": "session"
+  },
+  {
+    "type": "addDirectories",
+    "directories": [
+      "/root"
+    ],
+    "destination": "session"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Writing to temp file: /root/.tmux.conf.tmp.1227.1763402309275
+[DEBUG] Preserving file permissions: 100644
+[DEBUG] Temp file written successfully, size: 348 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /root/.tmux.conf.tmp.1227.1763402309275 to /root/.tmux.conf
+[DEBUG] File /root/.tmux.conf written atomically
+[DEBUG] Executing hooks for PostToolUse:Edit
+[DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "tmux source-file:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] AutoUpdaterWrapper: Installation type: npm-global, using native: false
+[DEBUG] Bash tool invoked with command: tmux source-file ~/.tmux.conf
+[DEBUG] Bash tool description: Reload tmux configuration
+[DEBUG] Executing hooks for PostToolUse:Bash
+[DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+[DEBUG] Slash commands included in SlashCommand tool:
+[DEBUG] npm view failed with code 1
+[DEBUG] npm stderr: node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '../lib/cli.js'
+Require stack:
+- /usr/bin/npm
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (/usr/bin/npm:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/usr/bin/npm' ]
+}
+
+Node.js v22.16.0
+[DEBUG] Stream started - received first chunk
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Executing hooks for PreToolUse:Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Found 0 hook commands to execute
+[DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "tmux kill-server:*"
+      },
+      {
+        "toolName": "Bash",
+        "ruleContent": "tmux new-session:*"
+      },
+      {
+        "toolName": "Bash",
+        "ruleContent": "tmux attach:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+[DEBUG] Getting matching hook commands for Notification with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
