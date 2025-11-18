@@ -272,10 +272,10 @@ COPY --from=build /usr/bin/npx /usr/bin/npx
 WORKDIR /workspace
 
 # Copy entrypoint script
-COPY scripts/entrypoint.sh /usr/local/bin/
+COPY happy-ttyd/claude/scripts/entrypoint.sh /usr/local/bin/
 
 # Copy all scripts and make them executable
-COPY scripts/* /usr/local/bin/
+COPY happy-ttyd/claude/scripts/* /usr/local/bin/
 RUN chmod +x /usr/local/bin/*
 
 # Expose ttyd port
@@ -299,7 +299,6 @@ version: '3.8'
 services:
   ttyd-terminal:
     image: \${CONTAINER_NAME:-${CONTAINER_NAME}}
-    container_name: \${CONTAINER_NAME:-${CONTAINER_NAME}}
     build:
       context: .
       dockerfile: Podmanfile
@@ -360,8 +359,6 @@ EOF
     tty: true
     networks:
       - ttyd-network
-    # Podman-specific: run as rootless
-    userns_mode: "keep-id"
     security_opt:
       - label=disable
 
