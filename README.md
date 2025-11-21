@@ -8,9 +8,7 @@ A containerized web-based terminal using ttyd on Alpine Linux with Claude Code a
 .
 ├── conf/
 │   ├── happy/                    # Happy Coder configuration (mounted to /root/.happy)
-│   ├── claude/
-│   │   └── conf/
-│   │       └── .claude/          # Claude Code configuration and state
+│   ├── claude/                   # Claude Code configuration (mounted to /root/.claude)
 │   └── scripts/
 │       └── entrypoint.sh         # Container entrypoint script
 ├── .env                          # Environment configuration (gitignored)
