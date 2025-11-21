@@ -1,8 +1,0 @@
-{
-  "pid": 35,
-  "httpPort": 39171,
-  "startTime": "11/17/2025, 4:08:09 PM",
-  "startedWithCliVersion": "0.11.2",
-  "lastHeartbeat": "11/17/2025, 6:00:54 PM",
-  "daemonLogPath": "/root/.happy/logs/11/17/2025-04-08-09-PM-pid-35-daemon.log"
-}
