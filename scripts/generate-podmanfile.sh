@@ -169,13 +169,8 @@ RUN npm install -g $EXTRA_NPM_PACKAGES
 EOF
     fi
     
-    # Copy built artifacts and configure container
+    # Configure container
     cat >> "$PODMANFILE" << EOF
-
-# Copy built artifacts from build stage
-COPY --from=build /usr/lib/node_modules /usr/lib/node_modules
-COPY --from=build /usr/bin/npm /usr/bin/npm
-COPY --from=build /usr/bin/npx /usr/bin/npx
 
 # Setup workspace
 WORKDIR /workspace
