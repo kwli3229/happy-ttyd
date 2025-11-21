@@ -1,9 +1,36 @@
+# Ignore everything by default
+*
+
+# But track these essential files
+!.gitignore
+!.env.example
+!Makefile
+!README.md
+!AGENTS.md
+
+# Track lib directory and its contents
+!lib/
+!lib/**
+
+# Track scripts directory and its contents
+!scripts/
+!scripts/**
+
+# Track only conf/scripts directory (not other conf subdirectories)
+!conf/
+!conf/scripts/
+!conf/scripts/**
+
 # Environment configuration with sensitive data
 .env
 
 # Generated files
 Podmanfile
 podman-compose.yml
+
+# Backup files
+build.sh.backup
+*.backup
 
 # macOS
 .DS_Store
@@ -12,8 +39,6 @@ podman-compose.yml
 *.swp
 *.swo
 *~
-.vscode/
-.idea/
 
 # Temporary files
 *.log

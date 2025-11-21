@@ -1,8 +1,8 @@
 # Makefile for ttyd Web Terminal Container
 # Provides targets for build, deploy, compose, and maintenance operations
 
-# Load environment variables
-include .env
+# Load environment variables (optional, won't fail if .env doesn't exist)
+-include .env
 export
 
 # Colors for output
@@ -15,58 +15,47 @@ NC := \033[0m # No Color
 .DEFAULT_GOAL := help
 
 # Phony targets
-.PHONY: help setup build deploy deploy-with-env stop start restart logs shell clean clean-all compose-up compose-down compose-restart status rebuild
+.PHONY: help setup generate-podmanfile generate-compose generate-all build rebuild push-to-ghcr \
+        deploy deploy-with-volume compose-up compose-down compose-restart compose-logs \
+        start stop restart status logs shell clean clean-all prune
 
-##@ Help
+##@ General
 
 help: ## Display this help message
 	@echo ""
 	@echo "$(GREEN)ttyd Web Terminal Container - Makefile$(NC)"
 	@echo ""
-	@awk 'BEGIN {FS = ":.*##"; printf "Usage:\n  make $(YELLOW)<target>$(NC)\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  $(YELLOW)%-20s$(NC) %s\n", $$1, $$2 } /^##@/ { printf "\n$(GREEN)%s$(NC)\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*##"; printf "Usage:\n  make $(YELLOW)<target>$(NC)\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  $(YELLOW)%-24s$(NC) %s\n", $$1, $$2 } /^##@/ { printf "\n$(GREEN)%s$(NC)\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 	@echo ""
 
-##@ Setup
-
-setup: ## Initialize .env file if it doesn't exist
-	@if [ ! -f .env ]; then \
-		echo "$(YELLOW)Creating .env from .env.example...$(NC)"; \
-		cp .env.example .env; \
-		echo "$(GREEN)✓ .env file created. Please edit it with your configuration.$(NC)"; \
-	else \
-		echo "$(GREEN)✓ .env file already exists.$(NC)"; \
-	fi
+setup: ## Create/edit .env configuration file
+	@./scripts/setup-env.sh
 
 ##@ Build
 
-build: ## Build the container image
-	@echo "$(GREEN)Building container image...$(NC)"
-	@./build.sh
-	@echo "$(GREEN)✓ Build complete!$(NC)"
+generate-podmanfile: ## Generate Podmanfile from .env
+	@./scripts/generate-podmanfile.sh
 
-rebuild: clean build ## Clean and rebuild the container image
+generate-compose: ## Generate podman-compose.yml from .env
+	@./scripts/generate-compose.sh
 
-generate-podmanfile: ## Generate Podmanfile without building
-	@echo "$(YELLOW)Generating Podmanfile...$(NC)"
-	@bash -c 'source .env && bash -c "source build.sh; generate_podmanfile"' 2>/dev/null || ./build.sh
-	@echo "$(GREEN)✓ Podmanfile generated$(NC)"
+generate-all: ## Generate both Podmanfile and compose file
+	@./scripts/generate-podmanfile.sh
+	@./scripts/generate-compose.sh
 
-generate-compose: ## Generate podman-compose.yml without building
-	@echo "$(YELLOW)Generating podman-compose.yml...$(NC)"
-	@if [ ! -f .env ]; then \
-		echo "$(RED)Error: .env file not found. Run 'make setup' first.$(NC)"; \
-		exit 1; \
-	fi
-	@bash -c 'source .env && source build.sh && generate_compose_file'
-	@echo "$(GREEN)✓ podman-compose.yml generated$(NC)"
+build: ## Generate files and build container image
+	@./scripts/generate-podmanfile.sh
+	@./scripts/generate-compose.sh
+	@./scripts/build-image.sh
 
-generate-all: ## Generate both Podmanfile and podman-compose.yml
-	@$(MAKE) generate-podmanfile
-	@$(MAKE) generate-compose
+rebuild: clean build ## Clean and rebuild container image
 
-##@ Deploy
+push-to-ghcr: ## Push image to GitHub Container Registry
+	@./scripts/registry-push.sh
 
-deploy: ## Deploy container with environment variables
+##@ Deploy (Direct Podman)
+
+deploy: ## Deploy with podman run (no volumes)
 	@echo "$(GREEN)Deploying container: $(CONTAINER_NAME)$(NC)"
 	@if podman ps -a --format "{{.Names}}" | grep -q "^$(CONTAINER_NAME)$$"; then \
 		echo "$(YELLOW)Removing existing container...$(NC)"; \
@@ -83,7 +72,7 @@ deploy: ## Deploy container with environment variables
 	@echo "$(GREEN)✓ Container deployed!$(NC)"
 	@echo "$(GREEN)Access at: $(YELLOW)http://localhost:$(TTYD_PORT)$(NC)"
 
-deploy-with-volume: ## Deploy container with workspace volume mount
+deploy-with-volume: ## Deploy with workspace volume mount
 	@echo "$(GREEN)Deploying container with volume: $(CONTAINER_NAME)$(NC)"
 	@if podman ps -a --format "{{.Names}}" | grep -q "^$(CONTAINER_NAME)$$"; then \
 		echo "$(YELLOW)Removing existing container...$(NC)"; \
@@ -102,45 +91,45 @@ deploy-with-volume: ## Deploy container with workspace volume mount
 	@echo "$(GREEN)✓ Container deployed with volume!$(NC)"
 	@echo "$(GREEN)Access at: $(YELLOW)http://localhost:$(TTYD_PORT)$(NC)"
 
-##@ Compose
+##@ Compose (Recommended)
 
-compose-up: ## Start services using podman-compose
+compose-up: ## Start services with podman-compose
 	@echo "$(GREEN)Starting services with podman-compose...$(NC)"
 	@podman-compose -f podman-compose.yml up -d
 	@echo "$(GREEN)✓ Services started!$(NC)"
 	@echo "$(GREEN)Access at: $(YELLOW)http://localhost:$(TTYD_PORT)$(NC)"
 
-compose-down: ## Stop services using podman-compose
+compose-down: ## Stop and remove compose services
 	@echo "$(YELLOW)Stopping services...$(NC)"
 	@podman-compose -f podman-compose.yml down
 	@echo "$(GREEN)✓ Services stopped!$(NC)"
 
-compose-restart: ## Restart services using podman-compose
+compose-restart: ## Restart compose services
 	@echo "$(YELLOW)Restarting services...$(NC)"
 	@podman-compose -f podman-compose.yml restart
 	@echo "$(GREEN)✓ Services restarted!$(NC)"
 
-compose-logs: ## View podman-compose logs
+compose-logs: ## View compose service logs (follow)
 	@podman-compose -f podman-compose.yml logs -f
 
 ##@ Container Management
 
-start: ## Start the container
+start: ## Start existing container
 	@echo "$(GREEN)Starting container: $(CONTAINER_NAME)$(NC)"
 	@podman start $(CONTAINER_NAME)
 	@echo "$(GREEN)✓ Container started!$(NC)"
 
-stop: ## Stop the container
+stop: ## Stop running container
 	@echo "$(YELLOW)Stopping container: $(CONTAINER_NAME)$(NC)"
 	@podman stop $(CONTAINER_NAME)
 	@echo "$(GREEN)✓ Container stopped!$(NC)"
 
-restart: ## Restart the container
+restart: ## Restart container
 	@echo "$(YELLOW)Restarting container: $(CONTAINER_NAME)$(NC)"
 	@podman restart $(CONTAINER_NAME)
 	@echo "$(GREEN)✓ Container restarted!$(NC)"
 
-status: ## Show container status
+status: ## Show container status and env vars
 	@echo "$(GREEN)Container Status:$(NC)"
 	@podman ps -a --filter name=$(CONTAINER_NAME)
 	@echo ""
@@ -151,16 +140,16 @@ status: ## Show container status
 		echo "$(RED)Container is not running$(NC)"; \
 	fi
 
-logs: ## View container logs
+logs: ## View container logs (follow)
 	@podman logs -f $(CONTAINER_NAME)
 
-shell: ## Access container shell
+shell: ## Open bash shell in container
 	@echo "$(GREEN)Accessing container shell...$(NC)"
 	@podman exec -it $(CONTAINER_NAME) bash
 
 ##@ Maintenance
 
-clean: ## Remove container and generated files
+clean: ## Remove container + generated files
 	@echo "$(YELLOW)Cleaning up...$(NC)"
 	@if podman ps -a --format "{{.Names}}" | grep -q "^$(CONTAINER_NAME)$$"; then \
 		echo "$(YELLOW)Removing container: $(CONTAINER_NAME)$(NC)"; \
@@ -176,37 +165,22 @@ clean: ## Remove container and generated files
 	fi
 	@echo "$(GREEN)✓ Cleanup complete!$(NC)"
 
-clean-all: clean ## Remove container, image, and generated files
+clean-all: clean ## Remove container + image + generated files
 	@echo "$(YELLOW)Removing image: $(CONTAINER_NAME)$(NC)"
 	@podman rmi -f $(CONTAINER_NAME) 2>/dev/null || true
 	@echo "$(GREEN)✓ Full cleanup complete!$(NC)"
 
-prune: ## Remove unused containers and images
+prune: ## Remove all unused containers and images
 	@echo "$(YELLOW)Pruning unused containers...$(NC)"
 	@podman container prune -f
 	@echo "$(YELLOW)Pruning unused images...$(NC)"
 	@podman image prune -f
 	@echo "$(GREEN)✓ Prune complete!$(NC)"
 
-update-deps: ## Update container dependencies (rebuild with latest packages)
-	@echo "$(YELLOW)Updating dependencies...$(NC)"
-	@$(MAKE) clean-all
-	@$(MAKE) build
-	@echo "$(GREEN)✓ Dependencies updated!$(NC)"
+##@ Convenience Aliases
 
-backup-env: ## Backup .env file
-	@echo "$(YELLOW)Backing up .env file...$(NC)"
-	@cp .env .env.backup.$$(date +%Y%m%d_%H%M%S)
-	@echo "$(GREEN)✓ Backup created!$(NC)"
+up: compose-up ## Alias: compose-up
 
-##@ Convenience Targets
+down: compose-down ## Alias: compose-down
 
-all: setup build deploy ## Setup, build, and deploy in one command
-
-dev: build deploy-with-volume logs ## Build, deploy with volume, and show logs
-
-up: deploy ## Alias for deploy
-
-down: stop ## Alias for stop
-
-ps: status ## Alias for status
+ps: status ## Alias: status
