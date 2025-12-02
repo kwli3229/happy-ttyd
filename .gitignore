@@ -8,6 +8,14 @@
 !README.md
 !AGENTS.md
 
+# Track make-app directory and its contents
+!make-app/
+!make-app/**
+
+# Track docs directory and its contents
+!docs/
+!docs/**
+
 # Track lib directory and its contents
 !lib/
 !lib/**
