@@ -1,6 +1,6 @@
 # ttyd Web Terminal Container
 
-A containerized web-based terminal using ttyd on Alpine Linux with Claude Code and Happy Coder integration.
+A containerized web-based terminal using ttyd on Alpine Linux with Happy Coder integration.
 
 ## File Structure
 
@@ -8,14 +8,25 @@ A containerized web-based terminal using ttyd on Alpine Linux with Claude Code a
 .
 ├── conf/
 │   ├── happy/                    # Happy Coder configuration (mounted to /root/.happy)
-│   ├── claude/                   # Claude Code configuration (mounted to /root/.claude)
-│   └── scripts/
+│   └── entrypoint/
 │       └── entrypoint.sh         # Container entrypoint script
+├── make-app/                     # Application build components
+│   ├── lib/                      # Shared library modules
+│   │   ├── common.sh             # Colors, logging, constants
+│   │   ├── env-loader.sh         # Environment loading and validation
+│   │   └── proxy-handler.sh      # Proxy configuration handling
+│   ├── scripts/                  # Executable task scripts
+│   │   ├── setup-env.sh          # Interactive .env creation
+│   │   ├── generate-podmanfile.sh    # Generate Podmanfile
+│   │   ├── generate-compose.sh       # Generate podman-compose.yml
+│   │   ├── build-image.sh        # Build container image
+│   │   └── registry-push.sh      # Push to GitHub Container Registry
+│   └── docs/                     # Documentation
 ├── .env                          # Environment configuration (gitignored)
 ├── .env.example                  # Configuration template
 ├── .gitignore                    # Git ignore rules
-├── build.sh                      # Multi-stage build script with dynamic Podmanfile generation
-├── Makefile                      # Build and deployment automation
+├── main.sh                       # Unified project manager (recommended)
+├── Makefile                      # Build and deployment automation (alternative)
 ├── podman-compose.yml            # Container orchestration (generated, gitignored)
 └── Podmanfile                    # Container definition (generated, gitignored)
 ```
@@ -37,9 +48,9 @@ graph TB
     end
 
     subgraph "Runtime"
-        G --> H[Container<br/>claude_ttyd-terminal_1]
-        I[conf/scripts/entrypoint.sh] --> H
-        J[conf/claude/conf/] -.mounted config.-> H
+        G --> H[Container<br/>happy_ttyd-terminal_1]
+        I[conf/entrypoint/entrypoint.sh] --> H
+        J[conf/happy/conf/] -.mounted config.-> H
     end
 
     subgraph "Access"
@@ -55,23 +66,102 @@ graph TB
 
 ## Quick Start
 
+### Option 1: Using main.sh (Recommended)
+
 ```bash
-# 1. Setup configuration (interactive)
-make setup           # Creates .env and opens in vim for editing
+# Complete setup in one command
+./main.sh full-setup
 
-# 2. Build container image
-make build           # Generates Podmanfile, podman-compose.yml and builds image
+# Or step by step:
+./main.sh setup      # Interactive configuration
+./main.sh generate   # Generate build files
+./main.sh build      # Build container image
+./main.sh deploy     # Start services
 
-# 3. Start services
-make up              # Start with podman-compose (recommended)
-
-# 4. Access terminal
-# Open http://localhost:7681 in your browser
+# Access terminal at http://localhost:7681
 ```
+
+### Option 2: Using Makefile
+
+```bash
+make setup           # Creates .env
+make build           # Generates files and builds image
+make up              # Start services
+
+# Access terminal at http://localhost:7681
+```
+
+## MCP Server Support
+
+The container can optionally include MCP (Model Context Protocol) servers for enhanced functionality.
+
+### Configuration
+
+```bash
+# In your .env file
+
+# Enable MCP server installation
+INSTALL_MCP_SERVERS=true
+
+# Single repository
+MCP_SERVER_REPOS="https://github.com/kwli3229/whatsapp-mcp"
+
+# Multiple repositories (space-separated)
+MCP_SERVER_REPOS="https://github.com/kwli3229/whatsapp-mcp https://github.com/user/another-mcp https://github.com/org/third-mcp"
+
+# Base installation path (optional, defaults to /mcp-server)
+MCP_SERVER_BASE_PATH=/mcp-server
+```
+
+### Directory Structure
+
+After installation, MCP servers will be organized as:
+
+```
+/mcp-server/
+├── whatsapp-mcp/           # First repository
+│   ├── package.json
+│   └── ...
+├── another-mcp/            # Second repository
+│   └── ...
+└── third-mcp/              # Third repository
+    └── ...
+```
+
+### Accessing MCP Servers
+
+```bash
+# List all installed MCP servers
+ls -la /mcp-server/
+
+# Access specific MCP server
+cd /mcp-server/whatsapp-mcp
+
+# Run MCP server (example)
+cd /mcp-server/whatsapp-mcp && npm start
+```
+
+### Build Process with MCP
+
+When `INSTALL_MCP_SERVERS=true`, the build process includes an additional stage:
+
+1. **BASE**: Alpine Linux with core system packages
+2. **BUILD**: Build-time dependencies (Node.js, npm)
+3. **MCP**: Clone and prepare MCP servers (NEW)
+4. **RUNTIME**: Final runtime environment with MCP servers
 
 ## Container Management
 
-### Recommended Workflow (using podman-compose)
+### Using main.sh
+
+```bash
+./main.sh deploy     # Start services
+./main.sh status     # Show project status
+./main.sh clean      # Clean up containers and files
+./main.sh help       # Show all commands
+```
+
+### Using Makefile
 
 ```bash
 make up              # Start services (alias for compose-up)

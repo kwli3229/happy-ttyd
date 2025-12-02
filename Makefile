@@ -29,29 +29,29 @@ help: ## Display this help message
 	@echo ""
 
 setup: ## Create/edit .env configuration file
-	@./scripts/setup-env.sh
+	@./make-app/scripts/setup-env.sh
 
 ##@ Build
 
 generate-podmanfile: ## Generate Podmanfile from .env
-	@./scripts/generate-podmanfile.sh
+	@./make-app/scripts/generate-podmanfile.sh
 
 generate-compose: ## Generate podman-compose.yml from .env
-	@./scripts/generate-compose.sh
+	@./make-app/scripts/generate-compose.sh
 
 generate-all: ## Generate both Podmanfile and compose file
-	@./scripts/generate-podmanfile.sh
-	@./scripts/generate-compose.sh
+	@./make-app/scripts/generate-podmanfile.sh
+	@./make-app/scripts/generate-compose.sh
 
 build: ## Generate files and build container image
-	@./scripts/generate-podmanfile.sh
-	@./scripts/generate-compose.sh
-	@./scripts/build-image.sh
+	@./make-app/scripts/generate-podmanfile.sh
+	@./make-app/scripts/generate-compose.sh
+	@./make-app/scripts/build-image.sh
 
 rebuild: clean build ## Clean and rebuild container image
 
 push-to-ghcr: ## Push image to GitHub Container Registry
-	@./scripts/registry-push.sh
+	@./make-app/scripts/registry-push.sh
 
 ##@ Deploy (Direct Podman)
 
@@ -165,9 +165,13 @@ clean: ## Remove container + generated files
 	fi
 	@echo "$(GREEN)✓ Cleanup complete!$(NC)"
 
-clean-all: clean ## Remove container + image + generated files
+clean-all: clean ## Remove container + image + generated files + .env
 	@echo "$(YELLOW)Removing image: $(CONTAINER_NAME)$(NC)"
 	@podman rmi -f $(CONTAINER_NAME) 2>/dev/null || true
+	@if [ -f .env ]; then \
+		echo "$(YELLOW)Removing .env file$(NC)"; \
+		rm -f .env; \
+	fi
 	@echo "$(GREEN)✓ Full cleanup complete!$(NC)"
 
 prune: ## Remove all unused containers and images

@@ -16,10 +16,10 @@
 !scripts/
 !scripts/**
 
-# Track only conf/scripts directory (not other conf subdirectories)
+# Track only conf/entrypoint directory (not other conf subdirectories)
 !conf/
-!conf/scripts/
-!conf/scripts/**
+!conf/entrypoint/
+!conf/entrypoint/**
 
 # Environment configuration with sensitive data
 .env
