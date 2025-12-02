@@ -128,19 +128,19 @@ After installation, MCP servers will be organized as:
     └── ...
 ```
 
-### Host-Container Volume Mapping
+### WhatsApp Session Data Persistence
 
-When using `podman-compose`, MCP servers are automatically mapped to your host machine:
+When MCP servers are enabled, the WhatsApp bridge session data is automatically persisted to your host machine:
 
 ```
-Host Directory              Container Directory
-./mcp-server/          <->  /mcp-server/
+Host Directory                              Container Directory
+./mcp-store/whatsapp-bridge/          <->  /mcp-server/whatsapp-mcp/whatsapp-bridge/store/
 ```
 
-This allows you to:
-- **Edit MCP server code** on your host machine
-- **Access logs and files** directly from your filesystem
-- **Develop and test** MCP servers without rebuilding the container
+**Benefits:**
+- **Persistent WhatsApp sessions** across container restarts
+- **Session data backup** - stored on host filesystem
+- **No re-authentication needed** after container recreation
 
 ### Accessing MCP Servers
 
@@ -149,8 +149,11 @@ This allows you to:
 # List all installed MCP servers
 ls -la /mcp-server/
 
-# Access specific MCP server
+# Access WhatsApp MCP server
 cd /mcp-server/whatsapp-mcp
+
+# View WhatsApp session store
+ls -la /mcp-server/whatsapp-mcp/whatsapp-bridge/store/
 
 # Run MCP server (example)
 cd /mcp-server/whatsapp-mcp && npm start
@@ -158,14 +161,14 @@ cd /mcp-server/whatsapp-mcp && npm start
 
 **On Your Host Machine:**
 ```bash
-# Access MCP server files directly
-cd ./mcp-server/whatsapp-mcp
+# Access WhatsApp session data
+ls -la ./mcp-store/whatsapp-bridge/
 
-# Edit configuration files
-vim ./mcp-server/whatsapp-mcp/config.json
+# Backup session data
+tar -czf whatsapp-sessions-backup.tar.gz ./mcp-store/whatsapp-bridge/
 
-# View logs
-tail -f ./mcp-server/whatsapp-mcp/logs/app.log
+# Restore session data (if needed)
+tar -xzf whatsapp-sessions-backup.tar.gz
 ```
 
 ### Build Process with MCP

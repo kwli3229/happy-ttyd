@@ -36,6 +36,9 @@
 Podmanfile
 podman-compose.yml
 
+# MCP server persistent data
+mcp-store/
+
 # Backup files
 build.sh.backup
 *.backup

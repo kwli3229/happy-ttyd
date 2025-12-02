@@ -119,11 +119,11 @@ generate_volumes_and_settings() {
       - ./conf/happy:/root/.happy:z
 EOF
 
-    # Add MCP server volume mapping if enabled
+    # Add WhatsApp MCP store volume mapping if enabled
     if [ "$INSTALL_MCP_SERVERS" = "true" ]; then
-        cat >> "$COMPOSE_FILE" << EOF
-      # Mount MCP servers directory for development and access
-      - ./mcp-server:${MCP_SERVER_BASE_PATH}:z
+        cat >> "$COMPOSE_FILE" << 'EOF'
+      # Mount WhatsApp bridge store for persistent session data
+      - ./mcp-store/whatsapp-bridge:/mcp-server/whatsapp-mcp/whatsapp-bridge/store:z
 EOF
     fi
     
@@ -182,7 +182,7 @@ show_summary() {
     echo "    - ./workspace:/workspace:z"
     echo "    - ./conf/happy:/root/.happy:z"
     if [ "$INSTALL_MCP_SERVERS" = "true" ]; then
-        echo "    - ./mcp-server:${MCP_SERVER_BASE_PATH}:z"
+        echo "    - ./mcp-store/whatsapp-bridge:/mcp-server/whatsapp-mcp/whatsapp-bridge/store:z"
     fi
     echo ""
     
