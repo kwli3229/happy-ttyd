@@ -36,9 +36,6 @@
 Podmanfile
 podman-compose.yml
 
-# MCP servers (cloned into host directory by container)
-mcp-server/
-
 # Backup files
 build.sh.backup
 *.backup
