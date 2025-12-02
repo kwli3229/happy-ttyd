@@ -128,8 +128,23 @@ After installation, MCP servers will be organized as:
     └── ...
 ```
 
+### Host-Container Volume Mapping
+
+When using `podman-compose`, MCP servers are automatically mapped to your host machine:
+
+```
+Host Directory              Container Directory
+./mcp-server/          <->  /mcp-server/
+```
+
+This allows you to:
+- **Edit MCP server code** on your host machine
+- **Access logs and files** directly from your filesystem
+- **Develop and test** MCP servers without rebuilding the container
+
 ### Accessing MCP Servers
 
+**Inside the Container:**
 ```bash
 # List all installed MCP servers
 ls -la /mcp-server/
@@ -139,6 +154,18 @@ cd /mcp-server/whatsapp-mcp
 
 # Run MCP server (example)
 cd /mcp-server/whatsapp-mcp && npm start
+```
+
+**On Your Host Machine:**
+```bash
+# Access MCP server files directly
+cd ./mcp-server/whatsapp-mcp
+
+# Edit configuration files
+vim ./mcp-server/whatsapp-mcp/config.json
+
+# View logs
+tail -f ./mcp-server/whatsapp-mcp/logs/app.log
 ```
 
 ### Build Process with MCP

@@ -117,6 +117,17 @@ generate_volumes_and_settings() {
       # Mount workspace directory for persistent data
       - ./workspace:/workspace:z
       - ./conf/happy:/root/.happy:z
+EOF
+
+    # Add MCP server volume mapping if enabled
+    if [ "$INSTALL_MCP_SERVERS" = "true" ]; then
+        cat >> "$COMPOSE_FILE" << EOF
+      # Mount MCP servers directory for development and access
+      - ./mcp-server:${MCP_SERVER_BASE_PATH}:z
+EOF
+    fi
+    
+    cat >> "$COMPOSE_FILE" << 'EOF'
     restart: unless-stopped
     stdin_open: true
     tty: true
@@ -170,6 +181,9 @@ show_summary() {
     echo -e "  ${BLUE}Volumes:${NC}"
     echo "    - ./workspace:/workspace:z"
     echo "    - ./conf/happy:/root/.happy:z"
+    if [ "$INSTALL_MCP_SERVERS" = "true" ]; then
+        echo "    - ./mcp-server:${MCP_SERVER_BASE_PATH}:z"
+    fi
     echo ""
     
     if [ "$USE_BUILD_PROXY" = "true" ]; then
